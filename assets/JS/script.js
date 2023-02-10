@@ -14,7 +14,7 @@ function generatePassword() {
   var includeLowerCase = window.confirm("Would you like to use Lower Case Letters?");
   var includeNumbers = window.confirm ("Would you like to use numbers?");
   var includeSpecial = window.confirm ("Would you like to use Special Characters?");
-
+ 
   // Write an if statement for password conditions
   // Using Concat method to make new arrays for each condition
   if (includeCapital && includeLowerCase && includeNumbers && includeSpecial) {
@@ -40,13 +40,22 @@ function generatePassword() {
   } else if (!includeCapital && includeLowerCase && !includeNumbers && includeSpecial) {
     var lowerCaseSpecial = lowerCaseLetter.concat(specialCharacter);
   } else if (includeCapital && !includeLowerCase && !includeNumbers && !includeSpecial) {
-    capitalLetter
+    capitalLetter;
   } else if (!includeCapital && includeLowerCase && !includeNumbers && !includeSpecial) {
-    lowerCaseNumbers
+    lowerCaseLetter;
   } else if (!includeCapital && !includeLowerCase && includeNumbers && !includeSpecial) {
-    numbers
+    numbers;
   } else if (!includeCapital && !includeLowerCase && !includeNumbers && includeSpecial) {
-    specialCharacter
+    specialCharacter;
+  } else {
+    var typeError = window.alert("Error!\nPlease select at least one Characer Type.")
+    return;
+  }
+
+  //Declare variable for Password Length
+  var passwordLength = window.prompt("Please select a password length between 8 and 128 characters");
+  if (passwordLength < 8 || passwordLength > 128) {
+    var lengthError = window.alert("Error!\nPlease select a password length between 8 and 128 characters.");
   }
   
 
