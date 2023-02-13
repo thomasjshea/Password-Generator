@@ -1,23 +1,29 @@
-# Password Generator Starter Code
+# Random Password Generator 
 
-## User Story
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
+## Description
 
-## Acceptance Criteria
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+This project is a password generator created using Javascript. My motivation for building this project is my desire to be secure while browsing and interacting with services online. This project takes input criteria from the user and the output is a randomly generated password using the criteria stated by the user. This will allow the user to easily generate a password meeting the requirements for most secure websites on the internet
+
+## Installation
+
+There is no installataion required for this app
+
+## Usage
+
+To use this app, you will need to load the URL into your browser.
+You will then click the "Generate Password" button and answer the prompts. 
+You must select a password length within the parameters, and select at least one character type or you will receive an error message.
+
+
+![alt text](./assets/images/Screenshot%20.png)
+
+https://thomasjshea.github.io/Password-Generator/
+   
+
+## Credits
+
+Tutoring Session with Marc Calache - He helped with with my for loop and getting the password to display correctly in the text area.
+
+## License
+
+MIT License
