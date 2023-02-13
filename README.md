@@ -13,6 +13,7 @@ There is no installataion required for this app
 To use this app, you will need to load the URL into your browser.
 You will then click the "Generate Password" button and answer the prompts. 
 You must select a password length within the parameters, and select at least one character type or you will receive an error message.
+Please refresh the page after generating a password to clear the textbox.
 
 
 ![alt text](./assets/images/Screenshot%20.png)
