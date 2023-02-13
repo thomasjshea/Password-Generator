@@ -132,25 +132,130 @@ function generatePassword() {
       var result = resultArray[1]
       return result;
     }
+    // Capital and Numbers
   } else if (includeCapital && !includeLowerCase && includeNumbers && !includeSpecial) {
-    var capitalNumbers = capitalLetter.concat(numbers);
+    var include = capitalLetter.concat(numbers);
+    var confirm = window.confirm ("Please Confirm:\nYou would like to include Capital Letters and Numbers?");
+    if (!confirm){
+      return placeholder;
+    }
+    else {
+      for(var i = 0; i < passwordLength; i++) {
+        password += include[Math.floor(Math.random()*include.length)];
+      }
+      var resultArray = password.split("HTMLTextAreaElement]");
+      var result = resultArray[1]
+      return result;
+    }
+    // Capital and Special
   } else if (includeCapital && !includeLowerCase && !includeNumbers && includeSpecial) {
-    var capitalSpecial = capitalLetter.concat(specialCharacter);
+    var include = capitalLetter.concat(specialCharacter);
+    var confirm = window.confirm("Please Confirm:\nYou would like to include Capital Letters and Special Characters?");
+    if (!confirm){
+      return placeholder;
+    }
+    else {
+      for(var i = 0; i < passwordLength; i++) {
+        password += include[Math.floor(Math.random()*include.length)];
+      }
+      var resultArray = password.split("HTMLTextAreaElement]");
+      var result = resultArray[1]
+      return result;
+    }
+    // Lower Case and Numbers
   } else if (!includeCapital && includeLowerCase && includeNumbers && !includeSpecial) {
-    var lowerCaseNumbers = lowerCaseLetter.concat(numbers);
+    var include = lowerCaseLetter.concat(numbers);
+    var confirm = window.confirm("Please Confirm:\nYou would like to include Lower Case Letters and Numbers?");
+    if (!confirm){
+      return placeholder;
+    }
+    else {
+      for(var i = 0; i < passwordLength; i++) {
+        password += include[Math.floor(Math.random()*include.length)];
+      }
+      var resultArray = password.split("HTMLTextAreaElement]");
+      var result = resultArray[1]
+      return result;
+    }
+    // Lower Case and Special
   } else if (!includeCapital && includeLowerCase && !includeNumbers && includeSpecial) {
-    var lowerCaseSpecial = lowerCaseLetter.concat(specialCharacter);
+    var include = lowerCaseLetter.concat(specialCharacter);
+    var confirm = window.confirm("Please Confirm:\nYou would like to include Lower Case Letters and Special Characters?");
+    if (!confirm){
+      return placeholder;
+    }
+    else {
+      for(var i = 0; i < passwordLength; i++) {
+        password += include[Math.floor(Math.random()*include.length)];
+      }
+      var resultArray = password.split("HTMLTextAreaElement]");
+      var result = resultArray[1]
+      return result;
+    }
+    // Capital Letters Only
   } else if (includeCapital && !includeLowerCase && !includeNumbers && !includeSpecial) {
-    capitalLetter;
+    var include = capitalLetter;
+    var confirm = window.confirm("Please Confirm:\nYou would like to include only Capital Letters?");
+    if (!confirm){
+      return placeholder;
+    }
+    else {
+      for(var i = 0; i < passwordLength; i++) {
+        password += include[Math.floor(Math.random()*include.length)];
+      }
+      var resultArray = password.split("HTMLTextAreaElement]");
+      var result = resultArray[1]
+      return result;
+    }
+    // Lower Case Letters Only
   } else if (!includeCapital && includeLowerCase && !includeNumbers && !includeSpecial) {
-    lowerCaseLetter;
+    var include = lowerCaseLetter;
+    var confirm = window.confirm("Please Confirm:\nYou would like to include only Lower Case Letters?");
+    if (!confirm){
+      return placeholder;
+    }
+    else {
+      for(var i = 0; i < passwordLength; i++) {
+        password += include[Math.floor(Math.random()*include.length)];
+      }
+      var resultArray = password.split("HTMLTextAreaElement]");
+      var result = resultArray[1]
+      return result;
+    }
+    // Numbers Only
   } else if (!includeCapital && !includeLowerCase && includeNumbers && !includeSpecial) {
-    numbers;
+    var include = numbers;
+    var confirm = window.confirm("Please Confirm:\nYou would like to include only Numbers?");
+    if (!confirm){
+      return placeholder;
+    }
+    else {
+      for(var i = 0; i < passwordLength; i++) {
+        password += include[Math.floor(Math.random()*include.length)];
+      }
+      var resultArray = password.split("HTMLTextAreaElement]");
+      var result = resultArray[1]
+      return result;
+    }
+    // Special Characters Only
   } else if (!includeCapital && !includeLowerCase && !includeNumbers && includeSpecial) {
-    specialCharacter;
+    var include = specialCharacter;
+    var confirm = window.confirm("Please Confirm:\nYou would like to include only Special Characters?");
+    if (!confirm){
+      return placeholder;
+    }
+    else {
+      for(var i = 0; i < passwordLength; i++) {
+        password += include[Math.floor(Math.random()*include.length)];
+      }
+      var resultArray = password.split("HTMLTextAreaElement]");
+      var result = resultArray[1]
+      return result;
+    }
+    // No Character Types Selected
   } else {
     var typeError = window.alert("Error!\nPlease select at least one Character Type.")
-    return;
+    return placeholder;
   }
 
 
@@ -165,8 +270,8 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  // Declared variable for placeholder text to return if there is an error
   var placeholder = document.getElementById("password").placeholder;
-  console.log (placeholder)
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
